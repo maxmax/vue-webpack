@@ -1,0 +1,14 @@
+<html>
+    <head>
+      <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+      <meta http-equiv="expires" content="0">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    </head>
+    <body>
+      <div id="app"><app-layout></app-layout></div>
+      <!-- Vendors you want to add from CDN -->
+     <% if (!htmlWebpackPlugin.options.isLocalBuild) { %>
+      <!-- Vendors in production CDN. -->
+     <% }  %>
+    </body>
+  </html>

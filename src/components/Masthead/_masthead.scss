@@ -1,0 +1,31 @@
+.masthead{
+  padding: 40px 20px;
+  font-size: 18px;
+  position: relative;
+  background: black;
+  color: white;
+  text-align: center;
+  z-index: 2;
+  h2 {
+    margin: 0;
+    text-transform: uppercase;
+  }
+  a {
+    display: block;
+    font-size: 16px;
+    color: white;
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid black;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+}
