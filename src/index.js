@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import routes from './utils/routes'
+import BootstrapVue from 'bootstrap-vue'
 import AppLayout from './pages/AppLayout.vue'
 import styles from './css/styles.scss';
 
@@ -34,6 +35,8 @@ Vue.mixin({
 Vue.filter('currency', function (value) {
   return '$' + value.toFixed(2);
 });
+
+Vue.use(BootstrapVue);
 
 const App = new Vue({
   el:'#app',

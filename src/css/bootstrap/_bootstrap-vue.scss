@@ -1,0 +1,405 @@
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .15s linear;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+/* workaround for https://github.com/bootstrap-vue/bootstrap-vue/issues/1560 */
+/* source: _input-group.scss */
+
+.input-group > {
+  .input-group-prepend > .b-dropdown > .btn {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .input-group-append {
+    &:not(:last-child) > .b-dropdown > .btn, &:last-child > .b-dropdown:not(:last-child):not(.dropdown-toggle) > .btn {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    > .b-dropdown > .btn {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+  .input-group-prepend {
+    &:not(:first-child) > .b-dropdown > .btn, &:first-child > .b-dropdown:not(:first-child) > .btn {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+
+/* Special styling for type=range and type=color input */
+
+input.form-control {
+  &[type="range"], &[type="color"] {
+    height: 2.25rem;
+  }
+  &.form-control-sm {
+    &[type="range"], &[type="color"] {
+      height: 1.9375rem;
+    }
+  }
+  &.form-control-lg {
+    &[type="range"], &[type="color"] {
+      height: 3rem;
+    }
+  }
+  &[type="color"] {
+    padding: 0.25rem 0.25rem;
+  }
+  &.form-control-sm[type="color"] {
+    padding: 0.125rem 0.125rem;
+  }
+}
+
+/* Less padding on type=color */
+
+/* Add support for fixed layout table */
+
+table.b-table {
+  &.b-table-fixed {
+    table-layout: fixed;
+  }
+  &[aria-busy='false'] {
+    opacity: 1;
+  }
+  &[aria-busy='true'] {
+    opacity: 0.6;
+  }
+  > {
+    thead > tr > th, tfoot > tr > th {
+      position: relative;
+    }
+    thead > tr > th.sorting, tfoot > tr > th.sorting {
+      padding-right: 1.5em;
+      cursor: pointer;
+    }
+    thead > tr > th.sorting {
+      &::before, &::after {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        opacity: 0.4;
+        padding-bottom: inherit;
+        font-size: inherit;
+        line-height: 180%;
+      }
+    }
+    tfoot > tr > th.sorting {
+      &::before, &::after {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        opacity: 0.4;
+        padding-bottom: inherit;
+        font-size: inherit;
+        line-height: 180%;
+      }
+    }
+    thead > tr > th.sorting::before, tfoot > tr > th.sorting::before {
+      right: 0.75em;
+      content: '\2191';
+    }
+    thead > tr > th.sorting::after, tfoot > tr > th.sorting::after {
+      right: 0.25em;
+      content: '\2193';
+    }
+    thead > tr > th {
+      &.sorting_asc::after, &.sorting_desc::before {
+        opacity: 1;
+      }
+    }
+    tfoot > tr > th {
+      &.sorting_asc::after, &.sorting_desc::before {
+        opacity: 1;
+      }
+    }
+  }
+  &.b-table-stacked {
+    width: 100%;
+    display: block;
+    > {
+      tbody {
+        display: block;
+        > tr {
+          display: block;
+          > {
+            td, th {
+              display: block;
+            }
+          }
+        }
+      }
+      caption {
+        display: block;
+      }
+      thead, tfoot {
+        display: none;
+      }
+      tbody > tr {
+        &.b-table-top-row, &.b-table-bottom-row {
+          display: none;
+        }
+        > {
+          :first-child {
+            border-top-width: 0.4rem;
+          }
+          [data-label] {
+            display: grid;
+            grid-template-columns: 40% auto;
+            grid-gap: 0.25rem 1rem;
+            &::before {
+              content: attr(data-label);
+              display: inline;
+              text-align: right;
+              overflow-wrap: break-word;
+              font-weight: bold;
+              font-style: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+  > tbody > tr.b-table-details > td {
+    border-top: none;
+  }
+}
+
+/* Busy table styling */
+
+/* Sort styling */
+
+/* Stacked table layout */
+/* Derived from http://blog.adrianroselli.com/2017/11/a-responsive-accessible-table.html */
+/* Always stacked */
+
+/* Hide stuff we can't deal with, or shouldn't show */
+
+/* inter-row top border */
+
+/* convert TD/TH contents to "cells". Caveat: child elements become cells! */
+
+/* generate row cell "heading" */
+
+@media all and (max-width: 575.99px) {
+  /* Under SM */
+  table.b-table.b-table-stacked-sm {
+    width: 100%;
+    display: block;
+    > {
+      tbody {
+        display: block;
+        > tr {
+          display: block;
+          > {
+            td, th {
+              display: block;
+            }
+          }
+        }
+      }
+      caption {
+        display: block;
+      }
+      thead, tfoot {
+        display: none;
+      }
+      tbody > tr {
+        &.b-table-top-row, &.b-table-bottom-row {
+          display: none;
+        }
+        > {
+          :first-child {
+            border-top-width: 0.4rem;
+          }
+          [data-label] {
+            display: grid;
+            grid-template-columns: 40% auto;
+            grid-gap: 0.25rem 1rem;
+            &::before {
+              content: attr(data-label);
+              display: inline;
+              text-align: right;
+              overflow-wrap: break-word;
+              font-weight: bold;
+              font-style: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* hide stuff we can't deal with, or shouldn't show */
+  /* inter-row top border */
+  /* convert TD/TH contents to "cells". Caveat: child elements become cells! */
+  /* generate row cell "heading" */
+}
+
+@media all and (max-width: 767.99px) {
+  /* under MD  */
+  table.b-table.b-table-stacked-md {
+    width: 100%;
+    display: block;
+    > {
+      tbody {
+        display: block;
+        > tr {
+          display: block;
+          > {
+            td, th {
+              display: block;
+            }
+          }
+        }
+      }
+      caption {
+        display: block;
+      }
+      thead, tfoot {
+        display: none;
+      }
+      tbody > tr {
+        &.b-table-top-row, &.b-table-bottom-row {
+          display: none;
+        }
+        > {
+          :first-child {
+            border-top-width: 0.4rem;
+          }
+          [data-label] {
+            display: grid;
+            grid-template-columns: 40% auto;
+            grid-gap: 0.25rem 1rem;
+            &::before {
+              content: attr(data-label);
+              display: inline;
+              text-align: right;
+              overflow-wrap: break-word;
+              font-weight: bold;
+              font-style: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* hide stuff we can't deal with, or shouldn't show */
+  /* inter-row top border */
+  /* convert TD/TH contents to "cells". Caveat: child elements become cells! */
+  /* generate row cell "heading" */
+}
+
+@media all and (max-width: 991.99px) {
+  /* under LG  */
+  table.b-table.b-table-stacked-lg {
+    width: 100%;
+    display: block;
+    > {
+      tbody {
+        display: block;
+        > tr {
+          display: block;
+          > {
+            td, th {
+              display: block;
+            }
+          }
+        }
+      }
+      caption {
+        display: block;
+      }
+      thead, tfoot {
+        display: none;
+      }
+      tbody > tr {
+        &.b-table-top-row, &.b-table-bottom-row {
+          display: none;
+        }
+        > {
+          :first-child {
+            border-top-width: 0.4rem;
+          }
+          [data-label] {
+            display: grid;
+            grid-template-columns: 40% auto;
+            grid-gap: 0.25rem 1rem;
+            &::before {
+              content: attr(data-label);
+              display: inline;
+              text-align: right;
+              overflow-wrap: break-word;
+              font-weight: bold;
+              font-style: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* hide stuff we can't deal with, or shouldn't show */
+  /* inter-row top border */
+  /* convert TD/TH contents to "cells". Caveat: child elements become cells! */
+  /* generate row cell "heading" */
+}
+
+@media all and (max-width: 1199.99px) {
+  /* under XL  */
+  table.b-table.b-table-stacked-xl {
+    width: 100%;
+    display: block;
+    > {
+      tbody {
+        display: block;
+        > tr {
+          display: block;
+          > {
+            td, th {
+              display: block;
+            }
+          }
+        }
+      }
+      caption {
+        display: block;
+      }
+      thead, tfoot {
+        display: none;
+      }
+      tbody > tr {
+        &.b-table-top-row, &.b-table-bottom-row {
+          display: none;
+        }
+        > {
+          :first-child {
+            border-top-width: 0.4rem;
+          }
+          [data-label] {
+            display: grid;
+            grid-template-columns: 40% auto;
+            grid-gap: 0.25rem 1rem;
+            &::before {
+              content: attr(data-label);
+              display: inline;
+              text-align: right;
+              overflow-wrap: break-word;
+              font-weight: bold;
+              font-style: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* hide stuff we can't deal with, or shouldn't show */
+  /* inter-row top border */
+  /* convert TD/TH contents to "cells". Caveat: child elements become cells! */
+  /* generate row cell "heading" */
+}
+
+/* Details row styling */

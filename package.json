@@ -64,6 +64,7 @@
     "webpack-serve": "^0.1.4"
   },
   "dependencies": {
+    "bootstrap-vue": "^2.0.0-rc.11",
     "vue": "^2.5.13"
   }
 }

@@ -21,6 +21,7 @@
       title="My journey with Vue"
       text="Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.">
     </below-fold>
+    <BootstrapUi></BootstrapUi>
   </div>
 </template>
 
@@ -30,6 +31,7 @@
   import Todos from '../components/Todos/index.vue'
   import ServicesList from '../components/ServicesList/index.vue'
   import BelowFold from '../components/BelowFold.vue'
+  import BootstrapUi from '../components/Bootstrap/index.vue'
 
   export default {
     name: 'AboutPage',
@@ -38,7 +40,8 @@
       Alert,
       Todos,
       BelowFold,
-      ServicesList
+      ServicesList,
+      BootstrapUi
     },
     data: function(){
       return {

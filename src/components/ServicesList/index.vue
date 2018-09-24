@@ -40,7 +40,8 @@
     background-color: #fafafa;
     border-radius: 2px;
     box-shadow: 0 1px 1px #ccc;
-    width: 400px;
+    width: 600px;
+    max-width: 100%;
     padding: 35px 60px;
     margin: 50px auto;
     h2{
