@@ -21,6 +21,9 @@
       title="My journey with Vue"
       text="Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.">
     </below-fold>
+    <b-container>
+      <markdown title="Sample Markdown"></markdown>
+    </b-container>
     <BootstrapUi></BootstrapUi>
   </div>
 </template>
@@ -32,6 +35,7 @@
   import ServicesList from '../components/ServicesList/index.vue'
   import BelowFold from '../components/BelowFold.vue'
   import BootstrapUi from '../components/Bootstrap/index.vue'
+  import Markdown from '../components/Markdown/index.vue'
 
   export default {
     name: 'AboutPage',
@@ -41,7 +45,8 @@
       Todos,
       BelowFold,
       ServicesList,
-      BootstrapUi
+      BootstrapUi,
+      Markdown
     },
     data: function(){
       return {

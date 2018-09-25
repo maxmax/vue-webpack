@@ -31,6 +31,11 @@
       <cards-element></cards-element>
     </div>
 
+    <h3>List group</h3>
+    <div class="br-m-b30">
+      <list-element></list-element>
+    </div>
+
     <h3>Pagination</h3>
     <div class="br-m-b30">
       <pagination-element></pagination-element>
@@ -71,6 +76,7 @@
   import GridsElement from './GridsElement/index.vue'
   import ButtonsElement from './ButtonsElement/index.vue'
   import CardsElement from './CardsElement/index.vue'
+  import ListElement from './ListElement/index.vue'
   import CollapseElement from './CollapseElement/index.vue'
   import TypeElement from './TypeElement/index.vue'
   import FormUi from './Forms/index.vue'
@@ -93,7 +99,8 @@
       PaginationElement,
       TablesElement,
       TabsElement,
-      ImagesElement
+      ImagesElement,
+      ListElement
     },
     props: {},
     methods: {}

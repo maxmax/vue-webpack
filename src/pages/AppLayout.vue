@@ -4,7 +4,8 @@
     <div class="btn-wrapper">
       <router-link class="hi" to="hello">Hi</router-link>
       <router-link class="bi" to="bye">Bi</router-link>
-      <router-link class="about" to="about">About</router-link>
+      <router-link class="about" to="about">Bootstrap-vue</router-link>
+      <router-link class="about" to="products">Products</router-link>
     </div>
     <keep-alive>
       <router-view></router-view>
