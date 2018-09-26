@@ -1,12 +1,12 @@
 <template>
   <div class="container-full">
-    <masthead
+    <masthead-head
       v-bind:visable="true"
       v-bind:title="masthead.title"
       v-bind:text="masthead.text"
       v-bind:link="masthead.link"
       v-bind:class="[masthead.type]">
-    </masthead>
+    </masthead-head>
 
     <b-container class="br-m-t30 br-m-b30">
       <b-row>
@@ -32,12 +32,12 @@
 
 <script>
 
-  import Masthead from '../components/Masthead/index.vue'
+  import MastheadHead from '../components/MastheadHead/index.vue'
 
   export default {
     name: 'Products',
     components: {
-      Masthead
+      MastheadHead
     },
     data: function(){
       return {

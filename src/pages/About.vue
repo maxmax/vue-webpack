@@ -1,20 +1,20 @@
 <template>
   <div class="container-full">
-    <masthead
+    <masthead-head
       v-bind:visable="true"
       v-bind:title="masthead.title"
       v-bind:text="masthead.text"
       v-bind:link="masthead.link"
       v-bind:class="[masthead.type]">
-    </masthead>
-    <alert
+    </masthead-head>
+    <alert-message
       v-bind:open="true"
       v-bind:choice="true"
       v-bind:title="message.title"
       v-bind:text="message.text"
       v-bind:class="[message.type]">
-    </alert>
-    <todos v-bind:data="todos" ></todos>
+    </alert-message>
+    <todos-list v-bind:data="todos" ></todos-list>
     <services-list v-bind:data="services" ></services-list>
     <div class="container br-m-t30 br-m-b30">{{pageContent}}</div>
     <below-fold
@@ -22,31 +22,31 @@
       text="Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.">
     </below-fold>
     <b-container>
-      <markdown title="Sample Markdown"></markdown>
+      <markdown-code title="Sample Markdown"></markdown-code>
     </b-container>
     <BootstrapUi></BootstrapUi>
   </div>
 </template>
 
 <script>
-  import Masthead from '../components/Masthead/index.vue'
-  import Alert from '../components/Alert/index.vue'
-  import Todos from '../components/Todos/index.vue'
+  import MastheadHead from '../components/MastheadHead/index.vue'
+  import AlertMessage from '../components/AlertMessage/index.vue'
+  import TodosList from '../components/TodosList/index.vue'
   import ServicesList from '../components/ServicesList/index.vue'
   import BelowFold from '../components/BelowFold.vue'
   import BootstrapUi from '../components/Bootstrap/index.vue'
-  import Markdown from '../components/Markdown/index.vue'
+  import MarkdownCode from '../components/MarkdownCode/index.vue'
 
   export default {
     name: 'AboutPage',
     components: {
-      Masthead,
-      Alert,
-      Todos,
+      MastheadHead,
+      AlertMessage,
+      TodosList,
       BelowFold,
       ServicesList,
       BootstrapUi,
-      Markdown
+      MarkdownCode
     },
     data: function(){
       return {

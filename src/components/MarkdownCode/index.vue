@@ -21,7 +21,7 @@
   import _ from 'lodash'
 
   export default {
-    name: 'Markdown',
+    name: 'MarkdownCode',
     props: {
       title: {
         type: String,

@@ -8,7 +8,7 @@
 
 <script>
   export default {
-    name: 'Masthead',
+    name: 'MastheadHead',
     props: {
       title: String,
       text: String,

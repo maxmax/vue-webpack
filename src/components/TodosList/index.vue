@@ -9,7 +9,7 @@
 
 <script>
   export default {
-    name: 'Todos',
+    name: 'TodosList',
     props: {
       data: Array
     },
