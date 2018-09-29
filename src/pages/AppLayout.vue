@@ -6,6 +6,7 @@
       <router-link class="bi" to="/bye">Bi</router-link>
       <router-link class="about" to="/about">Bootstrap-vue</router-link>
       <router-link class="about" to="/products">Products</router-link>
+      <router-link class="about" to="/beers">Beers</router-link>
     </div>
     <keep-alive>
       <router-view></router-view>

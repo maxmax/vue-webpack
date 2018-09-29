@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import routes from './utils/routes'
+import store from './store'
 import BootstrapVue from 'bootstrap-vue'
 import vSelect from 'vue-select'
 import AppLayout from './pages/AppLayout.vue'
@@ -45,6 +46,7 @@ Vue.component('v-select', vSelect);
 const App = new Vue({
   el:'#app',
   router,
+  store,
   name: 'AppLayout',
   render: h => h(AppLayout),
   methods: {

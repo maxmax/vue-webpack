@@ -40,27 +40,16 @@
         <div class="col-12">
         </div>
         <div class="col-12 col-sm-12 col-md-4" v-for="item in items" :key="item.id">
-          <b-card :title="item.name" :sub-title="item.tagline"
-            :img-src="item.image_url"
-            img-alt="Image"
-            img-top
-            tag="article"
-            class="mb-2">
-            <b-row>
-              <b-col>
-                <p class="small">{{item.first_brewed}}</p>
-              </b-col>
-              <b-col>
-                <p class="small text-right">
-                  <strong v-if="item.abv">ABV: {{item.abv}}</strong>
-                  <span v-if="item.abv && item.ibu"> | </span>
-                  <strong v-if="item.ibu">IBU: {{item.ibu}}</strong>
-                </p>
-              </b-col>
-            </b-row>
-            <p class="card-text">{{item.description}}</p>
-            <router-link class="btn btn-primary" :to="'product/' + item.id">Go somewhere</router-link>
-          </b-card>
+
+          <card-thumb :title="item.name"
+            :src="item.image_url"
+            :tagline="item.tagline"
+            :description="item.description"
+            :abv="item.abv"
+            :ibu="item.ibu"
+            :linkTo="'product/' + item.id"
+            :brewed="item.first_brewed" />
+            
         </div>
         <div class="col-12" v-if="itemsRows">
           <!--<div>currentPage: {{currentPage}}</div>-->
@@ -76,12 +65,14 @@
 
 <script>
 
-  import MastheadHead from '../components/MastheadHead/index.vue'
+  import MastheadHead from '../../components/MastheadHead/index.vue'
+  import CardThumb from './components/Card.vue'
 
   export default {
     name: 'Products',
     components: {
-      MastheadHead
+      MastheadHead,
+      CardThumb
     },
     props: {},
     data: function(){
