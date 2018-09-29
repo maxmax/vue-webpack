@@ -266,6 +266,12 @@
       <pre class="mt-3">{{ contentText }}</pre>
     </div>
 
+    <h4>Select</h4>
+
+    <v-select v-model="selected" :options="['one','two','three']"></v-select>
+
+    <br />
+
   </div>
 </template>
 

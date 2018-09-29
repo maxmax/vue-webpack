@@ -2,10 +2,10 @@
   <div class="container-full welcome-container">
     <h2>{{welcomeText}}</h2>
     <div class="btn-wrapper">
-      <router-link class="hi" to="hello">Hi</router-link>
-      <router-link class="bi" to="bye">Bi</router-link>
-      <router-link class="about" to="about">Bootstrap-vue</router-link>
-      <router-link class="about" to="products">Products</router-link>
+      <router-link class="hi" to="/hello">Hi</router-link>
+      <router-link class="bi" to="/bye">Bi</router-link>
+      <router-link class="about" to="/about">Bootstrap-vue</router-link>
+      <router-link class="about" to="/products">Products</router-link>
     </div>
     <keep-alive>
       <router-view></router-view>
@@ -28,14 +28,14 @@
       }
     },
     methods: {
-      _someSillyMethod() {
-        console.log('I bet you can not be as silly as me!')
+      $_someSillyMethod() {
+        console.log('I bet you can not be as silly as me - AppLayout!')
       }
     },
     mounted() {
     },
     created() {
-      this._someSillyMethod();
+      this.$_someSillyMethod();
     }
   }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div class="todos" v-if="data">
-    <div class="todo" v-for="todo in data">
+    <div class="todo" v-for="todo in data" :key="todo.id">
       <h3>{{ todo.title }}</h3>
       <div>{{ todo.text }}</div>
     </div>
@@ -13,11 +13,7 @@
     props: {
       data: Array
     },
-    methods: {
-      closeMessage: function () {
-        this.open = false
-      }
-    },
+    methods: {},
   }
 </script>
 

@@ -1,34 +1,43 @@
 <template>
   <div class="container-full">
+
     <masthead-head
       v-bind:visable="true"
       v-bind:title="masthead.title"
       v-bind:text="masthead.text"
       v-bind:link="masthead.link"
-      v-bind:class="[masthead.type]">
-    </masthead-head>
+      v-bind:class="[masthead.type]" />
+
     <alert-message
       v-bind:open="true"
       v-bind:choice="true"
       v-bind:title="message.title"
       v-bind:text="message.text"
-      v-bind:class="[message.type]">
-    </alert-message>
-    <todos-list v-bind:data="todos" ></todos-list>
-    <services-list v-bind:data="services" ></services-list>
+      v-bind:class="[message.type]" />
+
+    <todos-list v-bind:data="todos" />
+
+    <div class="br-m-t30 br-m-b30">
+      <BootstrapUi />
+    </div>
+
     <div class="container br-m-t30 br-m-b30">{{pageContent}}</div>
+
     <below-fold
       title="My journey with Vue"
-      text="Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.">
-    </below-fold>
+      text="Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum." />
+
     <b-container>
-      <markdown-code title="Sample Markdown"></markdown-code>
+      <markdown-code title="Sample Markdown" />
     </b-container>
-    <BootstrapUi></BootstrapUi>
+
+    <services-list v-bind:data="services" />
+
   </div>
 </template>
 
 <script>
+
   import MastheadHead from '../components/MastheadHead/index.vue'
   import AlertMessage from '../components/AlertMessage/index.vue'
   import TodosList from '../components/TodosList/index.vue'
@@ -85,11 +94,22 @@
         		price: 250,
         		active: false
         	}
+        ],
+        demoEvents: [
+          {
+            date: '2016/11/12', // Required
+            title: 'Foo' // Required
+          }, {
+            date: '2016/12/15',
+            title: 'Bar',
+            desc: 'description',
+            customClass: 'disabled highlight' // Custom classes to an calendar cell
+          }
         ]
       }
     },
     methods: {
-      _someGoofyMethod() {
+      $_someGoofyMethod() {
         console.log('I am goofier than you can ever be, on About Us!')
       }
     },
@@ -97,7 +117,7 @@
       console.log('About Mounted!')
     },
     created() {
-      this._someGoofyMethod();
+      this.$_someGoofyMethod();
     },
   }
 </script>

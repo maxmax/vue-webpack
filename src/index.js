@@ -3,8 +3,11 @@ import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import routes from './utils/routes'
 import BootstrapVue from 'bootstrap-vue'
+import vSelect from 'vue-select'
 import AppLayout from './pages/AppLayout.vue'
 import styles from './css/styles.scss';
+// import 'vue-event-calendar/dist/style.css' //^1.1.10, CSS has been extracted as one file, so you can easily update it.
+// import vueEventCalendar from 'vue-event-calendar'
 
 // Routes.
 Vue.use(VueRouter)
@@ -37,6 +40,7 @@ Vue.filter('currency', function (value) {
 });
 
 Vue.use(BootstrapVue);
+Vue.component('v-select', vSelect);
 
 const App = new Vue({
   el:'#app',
