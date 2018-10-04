@@ -5,6 +5,10 @@ import beers from './pages/Products/reducer'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  state: {},
+  actions: {},
+  mutations: {},
+  getters: {},
   modules: {
     beers,
   },

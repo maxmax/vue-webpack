@@ -1,12 +1,17 @@
 // import beerapi from '@/api/beers'
 import beerapi from '../../api/beers'
 
+// initial state
 const state = {
   fetching: false,
   error: false,
   beers: [],
 }
 
+// getters
+const getters = {}
+
+// Empty as helper
 const stripEmpty = obj => Object
   .entries(obj)
   .reduce((stripped, [key, value]) => {
@@ -19,7 +24,6 @@ const stripEmpty = obj => Object
 // actions
 const actions = {
   fetchBeers ({ commit, state }, params = {}) {
-    console.log('fetchBeers!', params);
     commit('FETCH_BEERS_PENDING')
     beerapi.beers(stripEmpty(params)).then(beers => {
       commit('FETCH_BEERS_SUCCESS', beers.body)
@@ -29,7 +33,7 @@ const actions = {
   },
 }
 
-// mutations
+// mutations (middleware)
 const mutations = {
   FETCH_BEERS_SUCCESS (state, beers) {
     state.fetching = false

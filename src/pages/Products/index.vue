@@ -49,7 +49,7 @@
             :ibu="item.ibu"
             :linkTo="'product/' + item.id"
             :brewed="item.first_brewed" />
-            
+
         </div>
         <div class="col-12" v-if="itemsRows">
           <!--<div>currentPage: {{currentPage}}</div>-->
@@ -282,30 +282,6 @@
       align-items: center;
       justify-content: center;
       font-size: 18px;
-    }
-    .card {
-      .card-title {
-        display: flex;
-        height: 84px;
-        justify-content: center;
-        flex-direction: column;
-      }
-      .card-subtitle {
-        font-size: 12px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-      }
-      .card-img-top {
-        margin: 20px auto 0px;
-        height: 200px;
-        object-fit: contain;
-      }
-      .card-text {
-        height: 120px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
     }
   }
   .form-control.custom-select {

@@ -11,8 +11,7 @@ const routes = [
   {path: '/about', name: 'about', component: About},
   {path: '/products', name: 'products', component: Products},
   {path: '/beers', name: 'beers', component: BeersPage},
-  // dynamic segments start with a colon
-  { path: '/product/:id', component: ProductPage },
+  {path: '/product/:id', component: ProductPage},
   {path: '', name:'default'}
 ]
 

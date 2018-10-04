@@ -30,7 +30,6 @@
     },
     created() {
       this.fetchBeers()
-      console.log('Buuump!', this.beers);
     },
     data() {
       return {
